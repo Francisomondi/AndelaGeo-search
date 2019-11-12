@@ -1,6 +1,54 @@
+*{
+padding: 0;
+margin:0;
+box-sizing: border-box;
+
+}
+body{
+    background-color:#6f3d32;
+   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    color: aliceblue;
+}
 .search{
     float: right;
-    padding:1em;
-    margin: 1em;
+    padding:01;
+    margin: 0em 1.5em;
+    
 
+
+}
+.search input{
+    padding: 0.3em;
+    
+    
+}
+.header{
+    text-align: center;
+    margin: 1em;
+}
+.search-data{
+    width: 70%;
+    margin: 5px;
+    height: 130vh;
+    padding: 110px;
+ background-color: red;
+ 
+}
+.search-map{
+   width: 90%;
+  margin: 50px;
+  background-color: blue;
+  height: 300px;
+
+}
+footer{
+    background-color: black;
+    height: 90px;
+    width:98%;
+    margin: 10px;
 }
