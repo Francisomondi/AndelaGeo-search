@@ -5,31 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Global geo search</title>
+
+    <script src="https://kit.fontawesome.com/2f6eb10992.js" crossorigin="anonymous"></script>
+    <title>Global Geo search</title>
 </head>
 <body>
-    <h1 class="header">ANDELA GLOBAL GEO-SEARCH</h1>
-    <div class="search">
-        <label for="search"></label>
-        <input class="input" type="text" id="location" placeholder="Location">
-        <button type="submit" class="submit">Search Location</button>
+    <div class="header">
+        <h2 >ANDELA GLOBAL GEO-SEARCH</h2>
     </div>
-   
+    <!--search input section-->
+    <div class="search-wrapper">
+        
+        <input class="input" type="text" id="search-location" placeholder="Search for a location">
+        <button type="submit" class="search-button" id="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    
+    <!--google maps section-->
     <div class="search-data">
-        <div class="timezone">
+        <div class="location">    
+            <h1 id="location-timezone">timezone</h1>
+            <p>icon</p>
+            
+        </div>
+        
+        
+        <div id="temp">
+            <div id="degree-section" >
+                <h1 id="temp-degree">34</h1>
+                <span>F</span>
+            </div>
 
         </div>
-        <div class="temp">
-
-        </div>
-        <div class="wind">
-WEATHER RESULTS
-        </div>
-        <div class="humidity"></div>
-        <div class="precipitation"></div>
+        
+        <div id="wind"></div>
+        <div id="humidity"></div>
+        <div id="precipitation"></div>
     
     </div>
-    <div class="search-map">
+
+    <!--google maps section-->
+    <div id="search-map">
        
     
     </div>
@@ -38,6 +53,6 @@ WEATHER RESULTS
     </footer>
     
 
-    <script src="js/main.js"></script>
+    <script src="../backend/app.js"></script>
 </body>
 </html>
