@@ -4,9 +4,7 @@ const submitBtn = document.getElementById('search-button');
 submitBtn.addEventListener('click',() =>{
     const input = document.getElementById('search-location').value;
     const locationTimezone = document.getElementById('location-timezone');
-    const wind = document.getElementById ('wind');
-   const humidity = document.getElementById('humidity');
-   const precipitation = document.getElementById('precipitation');
+    
     const api = `89d564e82d7aa6564b53f032a5e48d42`;
 
    if(input != ''){
@@ -17,8 +15,8 @@ submitBtn.addEventListener('click',() =>{
                type: 'GET',
                success: function (data) {
                    var widget = show(data);
-                   console.log(widget);
-                   $(input).html(widget);
+                   console.log(data);
+                   $(input).html(data);
 
                    $(locationTimezone).val('');
                }
@@ -34,7 +32,17 @@ submitBtn.addEventListener('click',() =>{
 
 });
 function show(data) {
-    return "<h3><strong>The weather today is </strong>: " + data.main.temp + " Degrees Celcius in </h3>" + "<h3><strong>" + data.name + "</strong> </h3>"
+    const locationTimezone = document.getElementById('location-timezone');
+    const wind = document.getElementById('wind');
+    const temp = document.getElementById('temp-degree');
+    const humidity = document.getElementById('humidity');
+    const precipitation = document.getElementById('precipitation');
+
+    locationTimezone.innerHTML = data.name;
+    temp.innerHTML = data.main.temp;
+    wind.innerHTML = data.wind.speed;
+    humidity.innerHTML = data.main.humidity;
+    precipitation.innerHTML = data.weather. description;
 }
 
 
