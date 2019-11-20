@@ -12,6 +12,8 @@
 <body>
     <div class="header">
         <h2 >ANDELA GLOBAL GEO-SEARCH</h2>
+        <span id="error" style="color: red"></span>
+        
     </div>
     <!--search input section-->
     <div class="search-wrapper">
@@ -23,6 +25,7 @@
     <!--google maps section-->
     <div class="container">
         <div class="search-data">
+            <h1 style="color: red">Current Weather Condition</h1>
             <div class="location">
                 <h1 id="location-timezone">timezone</h1>
                 <p>icon</p>
@@ -30,44 +33,56 @@
             </div>
         
         
-            <div id="temp">
+            <div class="temp">
+                <h2 class="temp-header">Temperature</h2>
                 <div id="degree-section">
-                    <h1 id="temp-degree">34</h1>
-                    <span>F</span>
+                    <h1 id="temp-degree">--</h1>
+                    <span>&deg;C</span>
+                    <p>icon</p>
                 </div>
         
             </div>
         
-            <div id="wind">
-                <h1>timezone</h1>
+            <div class="wind">
+                <h1 id="wind-header">wind</h1>
+                <h2 id="wind">--</h2>
                 <p>icon</p>
             </div>
-            <div id="humidity">
-                <h1>timezone</h1>
+
+            <div class="humidity">
+                <h1 class="humidity-header">Humidity</h1>
+                <h2   id="humidity">--</h2>
+                
                 <p>icon</p>
             </div>
-            <div id="precipitation">
-                <h1>timezone</h1>
+            <div class="description">
+                <h1 class="description-header">Description</h1>
+                <h2 id="description">--</h2>
+            
                 <p>icon</p>
             </div>
+           
         
         </div>
         
         <!--google maps section-->
         <div id="search-map">
-        
+           <h1 style="color: red">Geo Location map</h1>
         
         </div>
 
     </div>
     
     <footer>
-        
+        Privacy @Francis Omondi | DevC Trainee
     </footer>
     
 
     <script src="../backend/app.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw4n6MJ_TdU2zC7CirP1T5sUfFw2WrRpU&callback=initMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
     
     
