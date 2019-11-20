@@ -5,7 +5,7 @@ submitBtn.addEventListener('click',() =>{
     const input = document.getElementById('search-location').value;
     const locationTimezone = document.getElementById('location-timezone');
 
-    const mapApi =`AIzaSyAGpdCtnRD1PJ3kUuq2Wjn-Hpp_ykMlKSg `;
+   
     
     const api = `89d564e82d7aa6564b53f032a5e48d42`;
    
@@ -45,14 +45,6 @@ function show(data) {
     wind.innerHTML = data.wind.speed;
     humidity.innerHTML = data.main.humidity;
     description.innerHTML = data.description;
-}
-
-function initMap() {
-    let options = {
-        zoom: 8,
-        centre: { lat: data.coord.lat, long: data.coord.lon }
-    }
-    let map = new google.maps.Map(document.getElementById('search-map'), options);
 }
 
 
