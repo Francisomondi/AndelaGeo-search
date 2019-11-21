@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     align-content: center;
-    color: aliceblue;
+    color: #3f51b5;
 }
 .header{
     width: 95%;
@@ -55,7 +55,7 @@ body{
 .search-data{
     width: 42%;
     background: rgba(0, 0, 0, 0.6);
-    margin-top:13%;
+    margin-top:20%;
     text-align: center;
     display: inline;
    margin-right: 20px;
@@ -76,11 +76,12 @@ body{
 
 .aside{
     width: 19%;
-    background-color: red;
+    background: rgba(1, 0,0, 0.8);
     margin: 1px;
      border-radius: 5px;
     display: inline;
     float: left;
+    height: fit-content;
     
 }
 
@@ -88,7 +89,7 @@ footer{
     width: 100%;
     padding: 30px;
   background: rgba(0, 0, 0, 0.6);
-    margin-top: 80vh;
+    margin-top: 50vh;
     align-content: center;
     text-align: center;  
 }

@@ -7,14 +7,14 @@ function initMap(){
           let map = new google.maps.Map(searchmap,{
                   center:{
                   lat: 27.72,
-                  long: 85.36
+                  lng: 85.36
               },
               zoom:15
           });
           let marker = new google.maps.Marker({
               position:{
                   lat: 27.72,
-                  long: 85.36
+                  lng: 85.36
               },
               map:map,
               draggable:true
@@ -22,7 +22,11 @@ function initMap(){
     searchresults = new google.maps.places.SearchBox(input);
     
     //place change events on the map
-    
+    google.maps.event.addListener(searchresults, 'places_changed', ()=>{
+
+        console.log(searchresults.getPlaces());
+    });
+
 
          
 }   
