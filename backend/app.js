@@ -4,9 +4,6 @@ const submitBtn = document.getElementById('search-button');
 submitBtn.addEventListener('click',() =>{
     const input = document.getElementById('search-location').value;
     const locationTimezone = document.getElementById('location-timezone');
-
-   
-    
     const api = `89d564e82d7aa6564b53f032a5e48d42`;
    
    if(input != ''){
@@ -17,6 +14,7 @@ submitBtn.addEventListener('click',() =>{
                type: 'GET',
                success: function (data) {
                     show(data);
+                   initMap()
                    console.log(data);
                    $(input).html(data);
 
@@ -31,6 +29,10 @@ submitBtn.addEventListener('click',() =>{
        $("#error").html('**Search Field cannot be empty**');
    }
 });
+function initMap() {
+    let input = document.getElementById('search-location');
+    let autocomplete = new google.maps.places.Autocomplete(input);
+}
 
 
 function show(data) {
@@ -46,10 +48,3 @@ function show(data) {
     humidity.innerHTML = data.main.humidity;
     description.innerHTML = data.description;
 }
-
-
-
-
-
-
-
