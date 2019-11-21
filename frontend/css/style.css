@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     align-content: center;
-    color: aliceblue;
+    color: #3f51b5;
 }
 .header{
     width: 95%;
@@ -53,39 +53,43 @@ body{
     cursor: pointer;
 }
 .search-data{
-    width: 40%;
+    width: 42%;
     background: rgba(0, 0, 0, 0.6);
-    margin-top:13%;
-     text-align: center;
-   margin-right: 20px;
+    margin-top:20%;
+    text-align: center;
     display: inline;
-    flex-direction: column;
+   margin-right: 20px;
+    flex-direction: row;
     float: right;
-
-     
-
+    align-content: center;
 }
 #search-map{
     width: 55%;
     height: 400px;
     padding: 3%;
-   
+    margin-left: 10px;
+   align-content: center;
     position: absolute;
     top: 30%;
     
 }
 
-.location .wind{
-    width: 10%;
-    background-color: pink;
-    word-wrap: inherit;
+.aside{
+    width: 19%;
+    background: rgba(1, 0,0, 0.8);
+    margin: 1px;
+     border-radius: 5px;
+    display: inline;
+    float: left;
+    height: fit-content;
+    
 }
 
 footer{
     width: 100%;
     padding: 30px;
   background: rgba(0, 0, 0, 0.6);
-    margin-top: 20px;
+    margin-top: 50vh;
     align-content: center;
     text-align: center;  
 }
