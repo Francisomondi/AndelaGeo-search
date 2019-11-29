@@ -24,6 +24,17 @@ body{
     padding: 10px;
     font-size: 20px;
 }
+#degree-section{
+    display: flex;
+    align-items: center;
+    
+}
+#temp{
+  cursor: pointer;
+}
+#temp-degree, span{
+    margin: 2px;
+}
 .search-wrapper{
     position: absolute;
     top: 20%;
@@ -81,7 +92,6 @@ body{
      border-radius: 5px;
     display: inline;
     float: left;
-    height: fit-content;
     
 }
 

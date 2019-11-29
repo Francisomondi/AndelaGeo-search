@@ -7,13 +7,13 @@ function initMap(){
           let map = new google.maps.Map(searchmap,{
                   center:{
                   lat: 27.72,
-                  lng: 85.36
+                  lng: 85.36    
               },
               zoom:15
           });
           let marker = new google.maps.Marker({
               position:{
-                  lat: 27.72,
+                  lat: 47.72,
                   lng: 85.36
               },
               map:map,
@@ -25,8 +25,22 @@ function initMap(){
     google.maps.event.addListener(searchresults, 'places_changed', ()=>{
 
         console.log(searchresults.getPlaces());
+        let places = searchresults.getPlaces();
+
+        //bound
+        let bounds= new google.maps.LatLngBounds();
+        let i   ;
+        for(i= 0;places= places[i];i++){
+            console.log(places.geometry.location);
+            bounds.extend(place.geometry.location);
+            marker.setPosition(place.geometry.location); //set new marker position
+
+            map.fitBounds(bounds); //fit to the bond
+            map.setZoom(10); //set zoom
+
+        }
     });
 
 
-         
+            
 }   
